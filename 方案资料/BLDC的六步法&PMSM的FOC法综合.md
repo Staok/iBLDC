@@ -13,6 +13,9 @@
 
 ## 网络教程
 
+### 基本原理
+
+- 电机如何转起来的基本概念：[电动机控制漫谈 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/35420402)。
 - 入门文章，首先看：[无刷电机的工作原理图解 (360doc.com)](http://www.360doc.com/content/19/0613/13/6932394_842187623.shtml)、[【学习】无刷直流电机的基本结构及工作原理_duoduo_bu的博客-CSDN博客_无刷直流电机工作原理](https://blog.csdn.net/duoduo_bu/article/details/96473902)、[无刷直流电机系统基础知识 - 电工基础知识_电工学习网 (diangon.com)](https://www.diangon.com/thread-42532-1-1.html)。
 - [BLDC驱动学习_ 啥也不会唉的博客 -CSDN博客_bldc驱动](https://blog.csdn.net/qq_42415953/article/details/111150487)。
 - [【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/147659820) 该文对于 BLDC 和 PMSM 的介绍和区别 讲的比较好。
@@ -22,10 +25,16 @@
   - [FOC中的Clarke变换和Park变换详解（动图+推导+仿真+附件代码）_ GREYWALL-CSDN博客 _clarke变换](https://great.blog.csdn.net/article/details/103672042)。
 
   - [永磁同步电机控制笔记：clark变换park变换示意图_ 搞电机的博客-CSDN博客 _电流clark变换](https://blog.csdn.net/linzhe_deep/article/details/105162221)。
-- 一个 FOC 相关的文章集 [永磁同步电机_搞电机的博客-CSDN博客](https://blog.csdn.net/linzhe_deep/category_9827913.html)。
 - 完整展示 SVPWM 的计算过程 [svpwm仿真_ 基于Simulink的SVPWM仿真模块 _weixin_39631689的博客-CSDN博客](https://blog.csdn.net/weixin_39631689/article/details/111106063)。
 
-对于无刷电机的 概念基础知识 和 与 有刷电机的比较：[无刷电机_百度百科 (baidu.com)](https://baike.baidu.com/item/无刷电机/6255414?fr=aladdin)；[(原创）让你真正了解手里的无刷电机 (360doc.com)](http://www.360doc.com/content/16/0824/22/35813754_585692004.shtml)。
+### 进阶补充
+
+-  [无刷电机 - 知乎 (zhihu.com)](https://www.zhihu.com/topic/20054359/hot)，[电机矢量控制 - 收藏夹 - 知乎 (zhihu.com)](https://www.zhihu.com/collection/576911917)。
+- [电机原理与控制 - 知乎 (zhihu.com)](https://www.zhihu.com/column/c_1475237952008138752)。一个 FOC 相关的文章集 [永磁同步电机_搞电机的博客-CSDN博客](https://blog.csdn.net/linzhe_deep/category_9827913.html)。
+- 行业大佬知乎 [转子磁场定向 - 知乎 (zhihu.com)](https://www.zhihu.com/people/RQ-777)。
+- [ 目前在设计FOC驱动器，已经搞懂了FOC的框架和SVPWM实现原理，请问如何深入学习FOC算法？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/404590499)。
+
+### 对于无刷电机的 概念基础知识 和 与 有刷电机的比较
 
 > 引自：[无刷电机_百度百科 (baidu.com)](https://baike.baidu.com/item/无刷电机/6255414?fr=aladdin)、[(原创）让你真正了解手里的无刷电机 (360doc.com)](http://www.360doc.com/content/16/0824/22/35813754_585692004.shtml)、[无刷电机基础知识 (360doc.com)](http://www.360doc.com/content/18/0113/13/18790424_721569057.shtml)，摘一些句子，侵删。
 >
@@ -101,6 +110,11 @@
 
 ![直流无刷电机驱动-方案总图_页面_5](assets/直流无刷电机驱动-方案总图_页面_5.png)
 
+**补充：**
+
+1. 内环电流采集要达到10kHz频率。
+2. 位置控制可以直接 位置-电流 双环（上图写的是 位置-速度 双环，另听闻也可以 位置-电流 双环，都试试，看看响应）。
+
 ### FOC 算法实现细节
 
 ![直流无刷电机驱动-方案总图_页面_6](assets/直流无刷电机驱动-方案总图_页面_6.png)
@@ -153,13 +167,23 @@ ST 的无刷直流电机驱动选型：[无刷直流电机驱动器 - STMicroele
 
 运动和驱动解决方案：[运动和驱动解决方案 - STMicroelectronics](https://www.st.com/zh/solutions-reference-designs/industrial-motor-control-solutions.html#products)。
 
-ST 的 电机软件库 使用 ST MCSDK，其作为 X-CUBE-MCSDK 部件，其自带 上位机界面 进行曲线查看和参数调试等。下载页面 [X-CUBE-MCSDK - STM32电机控制软件开发套件（MCSDK） - STMicroelectronics](https://www.st.com/zh/embedded-software/x-cube-mcsdk.html)，其更多文档下载 [stmcu.com.cn X-CUBE-MCSDK 页面](https://www.stmcu.com.cn/ecosystem/app/Motor-control)，更多培训视频 [基于MC SDK V5.4电机库的STM32电机控制理论与实践-电堂科技 (51diantang.com)](https://c.51diantang.com/columndetail?id=126b8417f88949799f4caf99e98e2ee1)、[STM32电动机控制应用系列讲座-电堂科技 (51diantang.com)](https://c.51diantang.com/columndetail?id=2ab86a9228814c09a9621d3a970b21ac)、[STM32 TALK (电机控制私享会)-电堂科技 (51diantang.com)](https://c.51diantang.com/columndetail?id=c1de7395091c4524ab7cbe2ea56cc982)。
+ST 的 电机软件库 使用 ST MCSDK，其作为 X-CUBE-MCSDK 部件，其自带 上位机界面 进行曲线查看和参数调试等。下载页面 [X-CUBE-MCSDK - STM32电机控制软件开发套件（MCSDK） - STMicroelectronics](https://www.st.com/zh/embedded-software/x-cube-mcsdk.html)。
+
+其更多文档下载 [stmcu.com.cn X-CUBE-MCSDK 页面](https://www.stmcu.com.cn/ecosystem/app/Motor-control)；
+
+更多培训视频：
+
+- [基于MC SDK V5.4电机库的STM32电机控制理论与实践-电堂科技 (51diantang.com)](https://c.51diantang.com/columndetail?id=126b8417f88949799f4caf99e98e2ee1)。
+- [STM32电动机控制应用系列讲座-电堂科技 (51diantang.com)](https://c.51diantang.com/columndetail?id=2ab86a9228814c09a9621d3a970b21ac)。
+- [STM32 TALK (电机控制私享会)-电堂科技 (51diantang.com)](https://c.51diantang.com/columndetail?id=c1de7395091c4524ab7cbe2ea56cc982)。
+- 半个视频 [4小时带你轻松掌握 ST-MCSDK 5.4.3 电机库_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1aa4y1t74t)。
+- [学习笔记+ST无刷电机开发软件MCSDK中电机参数的测量 - STM32/STM8单片机论坛 - ST MCU意法半导体官方技术支持论坛 - 21ic电子技术开发论坛](https://bbs.21ic.com/icview-2892870-1-2.html)。
 
 ST MCSDK 网络文章教程：
 
 - [STM32G4板卡分享—STM32G4在电机控制中的应用 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/97748533)。
-- [如何拷贝工程_工程师笔记 | 如何结合STM32CubeMX与MC Workbench生成修改未包含的芯片程序..._喵仔冲鸭的博客-CSDN博客](https://blog.csdn.net/weixin_35282085/article/details/112738615)。
-- [type=file 把默认的未选择文件换成别的_工程师笔记：如何结合STM32CubeMX与MC Workbench生成修改未包含的芯片程序..._weixin_39630247的博客-CSDN博客](https://blog.csdn.net/weixin_39630247/article/details/111681443)。
+- [如何拷贝工程_ 工程师笔记 | 如何结合STM32CubeMX与MC Workbench生成修改未包含的芯片程序... _喵仔冲鸭的博客-CSDN博客](https://blog.csdn.net/weixin_35282085/article/details/112738615)。
+- [type=file 把默认的未选择文件换成别的_ 工程师笔记：如何结合STM32CubeMX与MC Workbench生成修改未包含的芯片程序... _weixin_39630247的博客-CSDN博客](https://blog.csdn.net/weixin_39630247/article/details/111681443)。
 
 > 对于 STM32 F4 的 DSP 和 一些 数学函数 的使用，使用 CMSIS 的 DSP，可以参看 **安富莱** 对于 STM32 DSP 的丰富教程。 
 
