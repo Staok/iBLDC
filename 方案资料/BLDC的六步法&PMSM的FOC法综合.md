@@ -15,11 +15,20 @@
 
 ### 基本原理
 
+**前置概念**
+
 - 电机如何转起来的基本概念：[电动机控制漫谈 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/35420402)。
 - 入门文章，首先看：[无刷电机的工作原理图解 (360doc.com)](http://www.360doc.com/content/19/0613/13/6932394_842187623.shtml)、[【学习】无刷直流电机的基本结构及工作原理_duoduo_bu的博客-CSDN博客_无刷直流电机工作原理](https://blog.csdn.net/duoduo_bu/article/details/96473902)、[无刷直流电机系统基础知识 - 电工基础知识_电工学习网 (diangon.com)](https://www.diangon.com/thread-42532-1-1.html)。
+
+**开始入门**
+
 - [BLDC驱动学习_ 啥也不会唉的博客 -CSDN博客_bldc驱动](https://blog.csdn.net/qq_42415953/article/details/111150487)。
 - [【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/147659820) 该文对于 BLDC 和 PMSM 的介绍和区别 讲的比较好。
 - [ 永磁同步电机控制笔记：foc控制原理通俗讲义_ 搞机的博客 -CSDN博客 _foc原理](https://blog.csdn.net/linzhe_deep/article/details/105849395)。
+- **一个很好的科普文章** [为什么三电技术中，电池、电机技术受到很大关注，反而电控技术却很少被提及？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/533112992/answer/2501854761)。
+
+**形象演示**
+
 - 对于两个变换的一些形象演示的动图，比较直观：
 
   - [FOC中的Clarke变换和Park变换详解（动图+推导+仿真+附件代码）_ GREYWALL-CSDN博客 _clarke变换](https://great.blog.csdn.net/article/details/103672042)。

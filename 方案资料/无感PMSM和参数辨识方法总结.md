@@ -1,3 +1,5 @@
+以下文章不一定按顺序看，先整体看，再选择性的、针对性的去看。做好总结，内化。
+
 无感BLDC六步法实施记录：
 
 - 启动：起步时候是开关启动（只给步），当有感应电动势时候再根据BEMF来正常转动。这里有讲bldc启动 [跟着高手学！DIY无刷电机控制器：画板、打样、焊接、调... - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/472639823)。
@@ -27,11 +29,15 @@ FOC实施：
 
 
 
-反电动势估计：
+[无感FOC性能到底能做到怎么样？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/61688599)。里面的后面有**五个foc文章** 记录。**无感foc，比低速，比加速，比高速，比重载**。
+
+
+
+**反电动势估计**：
 
 [【学习笔记】转子位置估算-反电势法 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/459302432)。[PMSM角度观测器——扩展反电动势(EEMF)直接计算法 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/382337513)。
 
-观测器估计：
+**观测器估计**：
 
 [基于滑模观测器的无位置传感器控制 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/394599297)
 
@@ -43,16 +49,32 @@ FOC实施：
 
 [无感PMSM四种种常见观测器特性比较：龙伯格观测器+PLL、滑模观测器+PLL、扩展卡尔曼滤波观测器以及非线性磁链观测器。 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/355512103)。
 
-高频注入：
+**高频注入**：
+
+[永磁同步电机 spmsm 和 ipmsm 的区别总结_小麦大叔的博客-CSDN博客_ipmsm](https://blog.csdn.net/u010632165/article/details/103637894)。
+
+
 
 [高频注入（HFI）原理分析Part1 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/362399772)，还有part2、3...
 
 [高频脉振电压注入 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/271269368)
 
-参数辨识：
+[产品级IPMSM高频注入低速无传感器控制方法_转子磁场定向的博客-CSDN博客](https://blog.csdn.net/RotorandStator/article/details/108917678)。
+
+[ HFI高频注入代码解读_转子磁场定向的博客-CSDN博客_高频注入法源码](https://blog.csdn.net/RotorandStator/article/details/111994878)。
+
+**参数辨识**：
 
 [参数辨识最小二乘法——永磁同步电机矢量控制课题拓展 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/369949394)
 
-ST MC：
+**其它方法**
+
+[一种新颖的PMSM转子初始位置检测_转子磁场定向的博客-CSDN博客_转子初始位置检测](https://blog.csdn.net/RotorandStator/article/details/118359917)。
+
+[基于磁链模型的非线性观测器_转子磁场定向的博客-CSDN博客_磁链观测器](https://blog.csdn.net/RotorandStator/article/details/118026889)。
+
+
+
+**ST MCSDK**：
 
 [STM32电机库（ST-MC-Workbench）学习记录——无感FOC代码生成 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/377112424)
