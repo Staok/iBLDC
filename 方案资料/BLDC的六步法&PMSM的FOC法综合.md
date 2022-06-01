@@ -26,6 +26,7 @@
 - [【自制FOC驱动器】深入浅出讲解FOC算法与SVPWM技术 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/147659820) 该文对于 BLDC 和 PMSM 的介绍和区别 讲的比较好。
 - [ 永磁同步电机控制笔记：foc控制原理通俗讲义_ 搞机的博客 -CSDN博客 _foc原理](https://blog.csdn.net/linzhe_deep/article/details/105849395)。
 - **一个很好的科普文章** [为什么三电技术中，电池、电机技术受到很大关注，反而电控技术却很少被提及？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/533112992/answer/2501854761)。
+- 对原理过一遍 [[转\]永磁同步电机越来越火 但其中的FOC/ DTC有几人能搞明白_martin0221的博客-CSDN博客](https://blog.csdn.net/martin0221/article/details/84139155)，[永磁同步电机越来越火 但其中的FOC/ DTC有几人能搞明白_电压 (sohu.com)](https://www.sohu.com/a/247445825_464086)。
 
 **形象演示**
 
